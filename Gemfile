@@ -2,6 +2,18 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
 
+gem "mongoid", "2.0.0.rc.6"
+gem 'bson_ext' 
+
+gem 'nifty-generators', :group => :development
+gem 'mocha'
+
+gem 'devise'
+gem 'devise_invitable'
+
+gem 'carrierwave'
+gem 'mini_magick'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
