@@ -2,14 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
 
-gem "mongoid", "2.0.0.rc.6"
+gem 'mongoid', '2.0.0.rc.6'
 gem 'bson_ext' 
 
 gem 'nifty-generators', :group => :development
 gem 'mocha'
 
-gem 'devise'
-gem 'devise_invitable'
+gem 'devise', '~> 1.2.rc', :git => 'git://github.com/plataformatec/devise.git'
+gem 'devise_invitable', '~> 0.4.rc2', :git => 'git://github.com/scambra/devise_invitable.git'
 
 gem 'carrierwave'
 gem 'mini_magick'

@@ -1,3 +1,20 @@
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: 0c5acc6f38abc90f38358cba217c4b9be5e7e72e
+  specs:
+    devise (1.2.rc)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
+GIT
+  remote: git://github.com/scambra/devise_invitable.git
+  revision: 210ccb6647c20d6f1e31661717ef3b3ffb01fe96
+  specs:
+    devise_invitable (0.4.rc2)
+      devise (~> 1.2.rc)
+      rails (~> 3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -35,11 +52,6 @@ GEM
     builder (2.1.2)
     carrierwave (0.5.1)
       activesupport (~> 3.0)
-    devise (1.1.6)
-      bcrypt-ruby (~> 2.1.2)
-      warden (~> 1.0.2)
-    devise_invitable (0.3.5)
-      devise (~> 1.1.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.5.0)
@@ -60,6 +72,7 @@ GEM
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
     nifty-generators (0.4.5)
+    orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -95,8 +108,8 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   carrierwave
-  devise
-  devise_invitable
+  devise (~> 1.2.rc)!
+  devise_invitable (~> 0.4.rc2)!
   mini_magick
   mocha
   mongoid (= 2.0.0.rc.6)
