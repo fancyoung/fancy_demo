@@ -1,1 +1,10 @@
-:)
+= fancy_demo
+
+== Summary
+Show build rails3 app step by step.
+
+rails3 + mongoid + nifty-generators + devise + devise_invitable + carrierwave + mini_magick
+
+== Important!
+
+imagemagick should be installed on system: $ sudo aptitude install imagemagick
