@@ -1,4 +1,6 @@
 FancyDemo::Application.routes.draw do
+  resources :posts
+
   devise_for :users
   
   match "/images/uploads/*path" => "gridfs#serve"
