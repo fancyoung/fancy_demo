@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, :only =>[:new, :create, :edit, :update, :destroy]
+
   def index
     @posts = Post.all
   end
@@ -13,6 +15,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
+    @post[:create_by] = current_user.id
+    @post[:update_by] = current_user.id
     if @post.save
       redirect_to @post, :notice => "Successfully created post."
     else
@@ -26,6 +30,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    @post[:update_by] = current_user.id
     if @post.update_attributes(params[:post])
       redirect_to @post, :notice  => "Successfully updated post."
     else
