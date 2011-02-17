@@ -7,4 +7,5 @@ rails3 + mongoid + nifty-generators + devise + devise_invitable + carrierwave + 
 
 == Important!
 
-imagemagick should be installed on system: $ sudo aptitude install imagemagick
+imagemagick should be installed on system: 
+            $ sudo aptitude install imagemagick
