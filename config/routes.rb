@@ -1,5 +1,7 @@
 FancyDemo::Application.routes.draw do
   devise_for :users
+  
+  match "/images/uploads/*path" => "gridfs#serve"
 
   get "home/index"
 
