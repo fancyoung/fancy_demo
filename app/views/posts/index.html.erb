@@ -1,19 +1,12 @@
 <% title "Posts" %>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-  </tr>
-  <% for post in @posts %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.body %></td>
-      <td><%= link_to "Show", post %></td>
-      <td><%= link_to "Edit", edit_post_path(post) %></td>
-      <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
-
+<ul>
+<% for post in @posts %>
+  <li>
+    <span><%= link_to post.title, post %></span>
+    <span>(<%= post.comments.length %>)</span>
+    <br />
+    <%= post.body %>
+  </li>
+<% end %>
+</ul>
 <p><%= link_to "New Post", new_post_path %></p>

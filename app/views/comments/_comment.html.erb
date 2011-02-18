@@ -1,0 +1,7 @@
+<li>
+  <span><%= comment.creater ? comment.creater.name : '-' %></span>
+  <span><%= comment.body %></span>
+  <%= link_to "Destroy", [comment.post, comment],
+              :confirm => 'Are you sure?', 
+              :method => :delete %>
+</li>

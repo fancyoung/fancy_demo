@@ -11,4 +11,9 @@ class User
   validates_length_of :name, :minimum => 2, :maximum => 30
   
   mount_uploader :avatar, AvatarUploader
+
+  # references_many :posts, :inverse_of => :creater
+  # references_many :posts, :inverse_of => :updater
+  # references_many :comments, :inverse_of => :creater
+  # references_many :comments, :inverse_of => :updater
 end
