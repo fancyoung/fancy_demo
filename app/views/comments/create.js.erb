@@ -1,0 +1,3 @@
+new Element('div', {html:"<%= escape_javascript(render @current_comment) %>"}).getChildren().injectInside($('comments')); 
+
+$('comment_body').value = '';

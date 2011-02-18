@@ -14,10 +14,13 @@ class CommentsController < ApplicationController
       params[:comment][:updater_id] = current_user.id
     end
     @comment = @post.comments.create(params[:comment])
-    if @comment.save
-      redirect_to post_path(@post), :notice => "Successfully created comment."
-    else
-      redirect_to post_path(@post), :notice => "Error when create comment."
+    respond_to do |format|
+      if @comment.save
+        format.js { @current_comment = @comment }
+        #redirect_to post_path(@post), :notice => "Successfully created comment."
+      else
+        redirect_to post_path(@post), :notice => "Error when create comment."
+      end
     end
   end
 
