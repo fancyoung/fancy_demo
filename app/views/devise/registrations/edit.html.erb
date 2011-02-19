@@ -10,7 +10,7 @@
   <%= f.text_field :name %></p>
 
   <p><%= f.label :avatar %><br />
-  <%= image_tag(resource.avatar.url(:thumb)) if :avatar? %>
+  <%= image_tag(resource.avatar.url(:thumb)) if !resource.avatar.url.nil? %>
   <%= f.file_field :avatar %></p>
   <%= f.hidden_field :avatar_cache %>
 
